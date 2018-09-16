@@ -1,7 +1,7 @@
 import { v4 as getID } from 'uuid';
 export default class Item{
   static fromRecord(record){
-    new Item(
+    return new Item(
       record.id || getID(),
       record.name || 'Unknown Item',
     )

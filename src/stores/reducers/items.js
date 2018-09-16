@@ -1,10 +1,10 @@
-import createReducer from 'redux-create-reducer';
+import { createReducer } from 'redux-create-reducer';
 
 import * as actions from '../actions';
 import { Item } from '../../classes';
 import { mapToMatch, byId } from '../../utils';
 
-initialState = {
+const initialState = {
   list: []
 }
 

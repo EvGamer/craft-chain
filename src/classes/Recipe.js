@@ -21,7 +21,7 @@ export default class Recipe{
         this.cloneWithNewResults = this._cloneWithNewItems.bind(this, 'results')
     }
     clone(){
-        return new(
+        return new Recipe(
             this.id, this.name, this.ingredients, this.results,
         )
     }
