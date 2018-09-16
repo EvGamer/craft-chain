@@ -1,0 +1,1 @@
+export default id => entry => id === entry.id; 

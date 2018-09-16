@@ -1,5 +1,15 @@
+import { v4 as getID } from 'uuid';
 export default class Recipe{
-    constructor(id, name, duration, ingredients = [], results = []){
+    static fromRecord(record){
+        return new Recipe(
+            record.id || getID(),
+            record.name || 'Unnamed recipe',
+            record.duration || undefined,
+            record.ingreients || undefined,
+            record.results || undefined,
+        )
+    }
+    constructor(id, name, duration = 1, ingredients = [], results = []){
         this.id = id;
         this.name = name;
         this.duration = duration;
